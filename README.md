@@ -1,79 +1,194 @@
-# Wearable-Sensor Activity Classification for Remote Monitoring: A Comparison of Decision Tree and Random Forest Models
+# Smartphone-Based Human Activity Recognition: A Comparison of Decision Tree and Random Forest Models
 
 ## 1. Project Overview
 
-This project investigates the classification of human physical activities using smartphone inertial sensor data. It compares two machine-learning algorithms, Decision Tree and Random Forest, using the UCI Human Activity Recognition (HAR) Using Smartphones dataset.
+This project investigates the performance of two machine-learning algorithms, Decision Tree and Random Forest, for classifying human physical activities using smartphone sensor data.
 
-The purpose is to establish a reproducible baseline comparison and evaluate whether Random Forest provides better classification performance than a single Decision Tree. The project focuses on activity recognition as a potential component of remote-monitoring applications. It does not diagnose medical conditions or evaluate patient health outcomes.
+The project uses the UCI Human Activity Recognition Using Smartphones (UCI HAR) dataset. The dataset contains sensor-derived features collected from 30 volunteers performing six physical activities.
+
+The purpose of the experiment is to compare the classification performance of both algorithms using the same training data, test data, and evaluation metrics.
+
+This is a preliminary research experiment for COMP-699-A Professional Seminar.
 
 ## 2. Research Question
 
-On the official subject-separated UCI HAR training and test split, how do Decision Tree and Random Forest compare in accuracy, macro-precision, macro-recall, and macro-F1 when classifying six physical activities using smartphone inertial sensor features?
+On the official UCI HAR training and test split, how do Decision Tree and Random Forest compare in accuracy, macro-precision, macro-recall, and macro-F1 when classifying six physical activities?
+
+The project also examines classification errors using confusion matrices.
 
 ## 3. Dataset
 
-**Dataset:** UCI Human Activity Recognition Using Smartphones
+The experiment uses the UCI Human Activity Recognition Using Smartphones dataset.
 
-**Source:** https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
+Dataset source: https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
 
-The dataset contains smartphone accelerometer and gyroscope measurements collected from 30 volunteers performing six activities:
+The dataset contains six activity classes:
 
-1. Walking
-2. Walking upstairs
-3. Walking downstairs
-4. Sitting
-5. Standing
-6. Laying
+- WALKING
+- WALKING_UPSTAIRS
+- WALKING_DOWNSTAIRS
+- SITTING
+- STANDING
+- LAYING
 
-The experiment uses the dataset's provided training and test partitions and its precomputed sensor features.
+The experiment uses the dataset's existing feature files and official training/test split.
 
-## 4. Research Method
+The dataset contains smartphone accelerometer- and gyroscope-derived features. It does not contain heart-rate measurements or clinical outcomes.
 
-The project uses Python and the following tools:
+## 4. Technologies Used
 
-- pandas and NumPy for data handling
-- scikit-learn for machine-learning models and evaluation
-- Matplotlib for visualizing confusion matrices
+- Python 3
+- pandas
+- Matplotlib
+- scikit-learn
+- GitHub
 
-The Decision Tree and Random Forest classifiers are evaluated on the same official test set. Performance is measured using accuracy, macro-precision, macro-recall, macro-F1, and confusion matrices.
+## 5. Machine-Learning Algorithms
 
-## 5. Preliminary Results
+### Decision Tree
 
-The initial experiment produced the following results:
+A Decision Tree learns rules from the training data and uses those rules to classify physical activities.
 
-| Metric | Decision Tree | Random Forest |
-|---|---:|---:|
-| Accuracy | 86.36% | 92.81% |
-| Macro-precision | 86.26% | 92.94% |
-| Macro-recall | 86.03% | 92.49% |
-| Macro-F1 | 86.05% | 92.62% |
+### Random Forest
 
-In this preliminary experiment, Random Forest achieved higher scores on all four reported metrics. These results apply to the selected dataset, test split, and model settings; they do not establish performance on real patients or other devices.
+A Random Forest combines predictions from multiple decision trees to classify physical activities.
+
+Both models are evaluated using the same dataset split and evaluation metrics.
 
 ## 6. Project Structure
 
-- `README.md` — Project overview and instructions
-- `docs/` — Research design, methodology, and supporting documentation
-- `src/` — Python source code for the experiment
-- `results/` — Preliminary metrics and confusion-matrix visualizations
+The repository is organized as follows:
 
-The `results/` folder will be included when the output files are added to the repository.
+```text
+FA26_Sowmya_COMP_699_A/
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── run_experiment.py
+│   └── smoke_test.py
+├── data/
+├── results/
+│   ├── model_metrics.csv
+│   ├── decision_tree_confusion_matrix.png
+│   └── random_forest_confusion_matrix.png
+└── docs/
+```
 
-## 7. Reproducibility
+The `data/` directory is used for the dataset, `src/` contains the Python scripts, `results/` contains generated experiment outputs, and `docs/` contains project documentation.
 
-The repository will document:
+## 7. Requirements
 
-- Python and required package versions
-- Dataset download and setup instructions
-- Commands for running the experiment
-- Scripts used to generate the evaluation metrics and confusion matrices
+The following software is required:
 
-The dataset itself should be obtained from the official UCI repository. Do not commit unnecessary large dataset archives or private information.
+- Python 3
+- pandas
+- Matplotlib
+- scikit-learn
 
-## 8. Limitations
+The project does not require a smartwatch, ECG device, or other special hardware for this experiment.
 
-The experiment uses a publicly available dataset collected under controlled conditions. Its findings may not generalize to other smartphones, sensor placements, populations, or everyday environments. Activity classification is not equivalent to medical diagnosis or clinical remote patient monitoring.
+## 8. How to Run
 
-## 9. Project Status
+### Step 1: Obtain the Dataset
 
-The project is being developed in stages. Research planning, implementation, preliminary evaluation, and documentation will be tracked through GitHub commits as the work progresses.
+Download the UCI HAR dataset from the official source:
+
+https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
+
+Extract the downloaded dataset and place its files in the location expected by `src/run_experiment.py`.
+
+Use the dataset's official training and test files.
+
+### Step 2: Open a Terminal
+
+Open a terminal in the repository's main directory, where `README.md` and `requirements.txt` are located.
+
+### Step 3: Install the Required Libraries
+
+Run:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4: Run the Experiment
+
+Run:
+
+```bash
+python src/run_experiment.py
+```
+
+The script loads the dataset, trains both machine-learning models, calculates evaluation metrics, prints classification reports, and generates confusion-matrix images.
+
+**Note:** The dataset must be downloaded and arranged in the location expected by the Python script before running the experiment. If the script cannot find the dataset, check the data path defined in `src/run_experiment.py`.
+
+## 9. Evaluation Metrics
+
+The models are evaluated using:
+
+- **Accuracy:** The proportion of all predictions that are correct.
+- **Macro-precision:** The average precision across the six activity classes.
+- **Macro-recall:** The average recall across the six activity classes.
+- **Macro-F1:** The average F1-score across the six activity classes.
+
+Confusion matrices are also used to examine which activities are misclassified.
+
+## 10. Preliminary Results
+
+The preliminary experiment produced the following results:
+
+| Metric | Decision Tree | Random Forest |
+|---|---:|---:|
+| Accuracy | 0.8636 | 0.9281 |
+| Macro-precision | 0.8626 | 0.9294 |
+| Macro-recall | 0.8603 | 0.9249 |
+| Macro-F1 | 0.8605 | 0.9262 |
+
+In this experiment, Random Forest achieved higher scores than Decision Tree across all four reported metrics.
+
+These are preliminary results from one public dataset and its official test split. They do not establish performance on real patients, heart-rate monitoring, medical diagnosis, or emergency detection.
+
+## 11. Results Files
+
+The `results/` directory contains:
+
+- `model_metrics.csv` — evaluation metrics for both models.
+- `decision_tree_confusion_matrix.png` — Decision Tree classification errors.
+- `random_forest_confusion_matrix.png` — Random Forest classification errors.
+
+These files support the comparison of model performance and classification errors.
+
+## 12. Limitations
+
+This experiment is limited to the UCI HAR dataset and its six physical activity classes. The results may not generalize to different devices, sensor placements, populations, or real-world conditions.
+
+The experiment evaluates activity classification rather than clinical health monitoring. Additional research would be required before making claims about medical applications.
+
+## 13. Reproducibility
+
+To reproduce the experiment:
+
+1. Obtain the UCI HAR dataset.
+2. Place the dataset files in the expected location.
+3. Install the dependencies using `requirements.txt`.
+4. Run `python src/run_experiment.py`.
+5. Review the generated metrics and confusion matrices in `results/`.
+
+The experiment uses fixed random seeds in the model configuration to support reproducibility.
+
+## 14. Project Status
+
+This repository contains preliminary Python code and results for a machine-learning comparison experiment conducted for COMP-699-A Professional Seminar.
+
+The research design, literature review, and final scope remain subject to the course requirements and instructor feedback.
+
+## 15. References
+
+Anguita, Davide, Alessandro Ghio, Luca Oneto, Xavier Parra, and Jorge Luis Reyes-Ortiz. 2013. “A Public Domain Dataset for Human Activity Recognition Using Smartphones.” In *Proceedings of the 21st European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning*.
+
+Breiman, Leo. 2001. “Random Forests.” *Machine Learning* 45: 5–32. https://doi.org/10.1023/A:1010933404324.
+
+Pedregosa, Fabian, Gaël Varoquaux, Alexandre Gramfort, et al. 2011. “Scikit-learn: Machine Learning in Python.” *Journal of Machine Learning Research* 12: 2825–2830. https://jmlr.org/papers/v12/pedregosa11a.html.
+
+Quinlan, J. Ross. 1986. “Induction of Decision Trees.” *Machine Learning* 1: 81–106. https://doi.org/10.1007/BF00116251.
