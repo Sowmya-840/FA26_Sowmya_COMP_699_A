@@ -20,7 +20,8 @@ The project also examines classification errors using confusion matrices.
 
 The experiment uses the UCI Human Activity Recognition Using Smartphones dataset.
 
-Dataset source: https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
+**Official dataset source:**  
+https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
 
 The dataset contains six activity classes:
 
@@ -57,8 +58,6 @@ Both models are evaluated using the same dataset split and evaluation metrics.
 
 ## 6. Project Structure
 
-The repository is organized as follows:
-
 ```text
 FA26_Sowmya_COMP_699_A/
 ├── README.md
@@ -74,7 +73,7 @@ FA26_Sowmya_COMP_699_A/
 └── docs/
 ```
 
-The `data/` directory is used for the dataset, `src/` contains the Python scripts, `results/` contains generated experiment outputs, and `docs/` contains project documentation.
+The `data/` directory is used for the dataset, `src/` contains the Python scripts, `results/` contains experiment outputs, and `docs/` contains project documentation.
 
 ## 7. Requirements
 
@@ -84,20 +83,15 @@ The following software is required:
 - pandas
 - Matplotlib
 - scikit-learn
+- An internet connection for the initial automatic dataset download, if the dataset is not already available locally
 
-The project does not require a smartwatch, ECG device, or other special hardware for this experiment.
+No smartwatch, ECG device, or other special hardware is required for this experiment.
 
 ## 8. How to Run
 
-### Step 1: Obtain the Dataset
+### Step 1: Obtain the Project
 
-Download the UCI HAR dataset from the official source:
-
-https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
-
-Extract the downloaded dataset and place its files in the location expected by `src/run_experiment.py`.
-
-Use the dataset's official training and test files.
+Clone or download this GitHub repository to your computer.
 
 ### Step 2: Open a Terminal
 
@@ -111,9 +105,23 @@ Run:
 pip install -r requirements.txt
 ```
 
-### Step 4: Run the Experiment
+### Step 4: Prepare the Dataset
 
-Run:
+The experiment attempts to download the UCI HAR dataset automatically if the expected dataset files are missing.
+
+Make sure your computer has an internet connection before running the experiment.
+
+If automatic downloading fails, download the dataset from the official source:
+
+https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
+
+Extract the dataset into the location expected by `src/run_experiment.py`. The script expects the training feature file at:
+
+`data/UCI HAR Dataset/train/X_train.txt`
+
+### Step 5: Run the Experiment
+
+Run the following command from the repository's main directory:
 
 ```bash
 python src/run_experiment.py
@@ -121,11 +129,13 @@ python src/run_experiment.py
 
 The script loads the dataset, trains both machine-learning models, calculates evaluation metrics, prints classification reports, and generates confusion-matrix images.
 
-**Note:** The dataset must be downloaded and arranged in the location expected by the Python script before running the experiment. If the script cannot find the dataset, check the data path defined in `src/run_experiment.py`.
+### Step 6: Review the Results
+
+After the experiment finishes, review the output files in the `results/` directory.
 
 ## 9. Evaluation Metrics
 
-The models are evaluated using:
+The models are evaluated using the following metrics:
 
 - **Accuracy:** The proportion of all predictions that are correct.
 - **Macro-precision:** The average precision across the six activity classes.
@@ -169,9 +179,9 @@ The experiment evaluates activity classification rather than clinical health mon
 
 To reproduce the experiment:
 
-1. Obtain the UCI HAR dataset.
-2. Place the dataset files in the expected location.
-3. Install the dependencies using `requirements.txt`.
+1. Obtain the repository.
+2. Install the dependencies using `requirements.txt`.
+3. Ensure the dataset is available in the expected location or allow the script to download it.
 4. Run `python src/run_experiment.py`.
 5. Review the generated metrics and confusion matrices in `results/`.
 
@@ -181,7 +191,7 @@ The experiment uses fixed random seeds in the model configuration to support rep
 
 This repository contains preliminary Python code and results for a machine-learning comparison experiment conducted for COMP-699-A Professional Seminar.
 
-The research design, literature review, and final scope remain subject to the course requirements and instructor feedback.
+The research design, literature review, and final project scope remain subject to the course requirements and instructor feedback.
 
 ## 15. References
 
