@@ -10,16 +10,17 @@ How do Gaussian Naive Bayes and Random Forest compare in classifying selected MI
 I executed a Jupyter notebook using MIT-BIH v1.0.0 records 100 and 106. Both records loaded; all 14 structural checks and annotation-count checks passed. Four channels had zero NaN and infinite values. I generated descriptive tables, annotation counts, signal plots, provenance, and execution records. I have not trained a model or computed classification metrics.
 
 ## Repository artifact status
-The notebook, original result files, environment snapshot, and research_foundation.pdf are pending upload. The documentation alone does not complete the milestone.
+My executed notebook, principal dependencies, environment snapshot, eight CSV/JSON evidence files, three PNG plots, and research_foundation.pdf are committed in the locations below. These artifacts document the Week 1 computational foundation, not a completed model comparison.
 
-## Intended structure
+## Repository structure
 - src/week1_ecg_research_foundation.ipynb: my executed notebook
 - src/requirements.txt: principal dependencies
 - src/environment_lock.txt: my recorded local environment
-- results/week_1/: actual inspection outputs
+- results/week_1/: eight CSV/JSON evidence files and three PNG plots
 - docs/step_2/week_1/research_foundation.pdf: required report
+- docs/step_2/week_1/progress.md: supporting progress note
 
-## Run after notebook upload
+## Execution instructions
 Use Python 3.11 with Jupyter and ipykernel. Install principal packages with `python -m pip install -r src/requirements.txt`. Select the environment containing those packages as the notebook kernel. Open the notebook from the repository root or src/ and verify the displayed project root. Execute cells in order. Initial acquisition requires internet; existing nonempty downloads are reused. Skip the optional installation cell when already configured. My saved notebook outputs document sequential local execution; a fresh-kernel full rerun remains recommended.
 
 ## Data and attribution

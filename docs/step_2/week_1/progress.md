@@ -18,4 +18,4 @@ My initial system-wide Anaconda installation failed with an access-denied error.
 I will finalize symbols and lead policy, acquire adequate records, map subjects and create disjoint partitions, implement validated beat features, and compare a majority reference, Gaussian Naive Bayes, and Random Forest with consistent preprocessing and metrics.
 
 ## Repository status
-My executed notebook, original outputs, environment snapshot, and required PDF remain pending repository upload. This note supplements rather than replaces research_foundation.pdf.
+My executed notebook and dependency files are committed under src/. Eight CSV/JSON evidence files and three PNG plots are committed under results/week_1/. The date-free research_foundation.pdf is committed under docs/step_2/week_1/. This note supplements rather than replaces that report. My saved outputs document sequential local execution; a clean-kernel full rerun remains recommended.
