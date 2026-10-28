@@ -7,7 +7,7 @@ Offline ECG heartbeat classification using MIT-BIH data. This project does not i
 How do Gaussian Naive Bayes and Random Forest compare in classifying selected MIT-BIH heartbeat classes under subject-disjoint evaluation? Their error patterns and macro-F1 may differ; no direction is established. Classes, exclusions, and features remain to be finalized.
 
 ## Completed locally: Week 1
-The student executed a Jupyter notebook using MIT-BIH v1.0.0 records 100 and 106. Both records loaded; 14 structural checks and annotation-count checks passed. Four channels had zero NaN and infinite values. Descriptive tables, annotation counts, signal plots, provenance, and execution records were generated. No model training or classification metrics are claimed.
+Executed a Jupyter notebook using MIT-BIH v1.0.0 records 100 and 106. Both records loaded; 14 structural checks and annotation-count checks passed. Four channels had zero NaN and infinite values. Descriptive tables, annotation counts, signal plots, provenance, and execution records were generated. No model training or classification metrics are claimed.
 
 ## Repository artifact status
 The notebook, original result files, environment snapshot, and research_foundation.pdf are pending upload. This documentation commit does not by itself complete the milestone.
