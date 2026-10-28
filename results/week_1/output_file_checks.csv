@@ -1,0 +1,9 @@
+filename,exists_and_nonempty
+download_manifest.json,True
+record_metadata.csv,True
+validation_checks.csv,True
+signal_quality_summary.csv,True
+annotation_counts.csv,True
+annotation_distribution.png,True
+record_100_segment.png,True
+record_106_segment.png,True

@@ -1,0 +1,15 @@
+record_id,check,passed
+100,signal_length_matches_header,True
+100,channel_count_matches_header,True
+100,channel_metadata_matches,True
+100,annotation_lengths_match,True
+100,annotation_indices_are_integer,True
+100,annotation_indices_in_range,True
+100,annotation_indices_sorted,True
+106,signal_length_matches_header,True
+106,channel_count_matches_header,True
+106,channel_metadata_matches,True
+106,annotation_lengths_match,True
+106,annotation_indices_are_integer,True
+106,annotation_indices_in_range,True
+106,annotation_indices_sorted,True

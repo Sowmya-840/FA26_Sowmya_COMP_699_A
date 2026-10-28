@@ -1,0 +1,3 @@
+record_id,samples,channels,sampling_frequency_hz,duration_minutes,channel_names,units,annotation_entries
+100,650000,2,360.0,30.092592592592595,"MLII, V5","mV, mV",2274
+106,650000,2,360.0,30.092592592592595,"MLII, V1","mV, mV",2098
