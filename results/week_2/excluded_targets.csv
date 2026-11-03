@@ -1,0 +1,9 @@
+record_id,sample,label,reason
+106,351,N,no_previous_reference_beat
+108,88,N,no_previous_reference_beat
+119,309,N,no_previous_reference_beat
+100,77,N,no_previous_reference_beat
+100,649991,N,incomplete_window
+105,197,N,no_previous_reference_beat
+200,225,V,no_previous_reference_beat
+200,649927,N,incomplete_window

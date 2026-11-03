@@ -1,0 +1,131 @@
+{
+  "dataset_version": "1.0.0",
+  "files": [
+    {
+      "record_id": "106",
+      "file": "106.hea",
+      "bytes": 158,
+      "url": "https://physionet.org/files/mitdb/1.0.0/106.hea",
+      "sha256": "ad5ed3ee5603926a07a09f0d0c9e2a7ff10a705dbafcde3d185317730a8839ab"
+    },
+    {
+      "record_id": "106",
+      "file": "106.dat",
+      "bytes": 1950000,
+      "url": "https://physionet.org/files/mitdb/1.0.0/106.dat",
+      "sha256": "c017bc18b95b1f970bca143a044ee5d54168648b541e47aa656f2737a59c1202"
+    },
+    {
+      "record_id": "106",
+      "file": "106.atr",
+      "bytes": 5476,
+      "url": "https://physionet.org/files/mitdb/1.0.0/106.atr",
+      "sha256": "585347e6d1bd3ad89cdb52cb80945878a5e51026d81f871a376bb6e13936f7fa"
+    },
+    {
+      "record_id": "108",
+      "file": "108.hea",
+      "bytes": 311,
+      "url": "https://physionet.org/files/mitdb/1.0.0/108.hea",
+      "sha256": "1c461d963db1883589a975daa80b4104eee6cabb2f5cfec3e0d63b78e7a6a405"
+    },
+    {
+      "record_id": "108",
+      "file": "108.dat",
+      "bytes": 1950000,
+      "url": "https://physionet.org/files/mitdb/1.0.0/108.dat",
+      "sha256": "229a4ef62679dc5c6ea781bfbaec2bd784151fc9f9517f4cdecd533a9431eb20"
+    },
+    {
+      "record_id": "108",
+      "file": "108.atr",
+      "bytes": 3742,
+      "url": "https://physionet.org/files/mitdb/1.0.0/108.atr",
+      "sha256": "ea227008ac3bc4ada87807117909e77ae0643d5a8bc09f32b9096a35f140cbf3"
+    },
+    {
+      "record_id": "119",
+      "file": "119.hea",
+      "bytes": 158,
+      "url": "https://physionet.org/files/mitdb/1.0.0/119.hea",
+      "sha256": "658f01382d7280a06e2f4c06363569d477394a6898c69ee788bb383f6092df63"
+    },
+    {
+      "record_id": "119",
+      "file": "119.dat",
+      "bytes": 1950000,
+      "url": "https://physionet.org/files/mitdb/1.0.0/119.dat",
+      "sha256": "02a286a28e69b441568add915f16a2856b22bab893bf8729ee9654411ed3a5aa"
+    },
+    {
+      "record_id": "119",
+      "file": "119.atr",
+      "bytes": 4812,
+      "url": "https://physionet.org/files/mitdb/1.0.0/119.atr",
+      "sha256": "fd919c8ea20eed4a22fb37984977f30ce48d382eefd2d90934bf947a88e0fd7b"
+    },
+    {
+      "record_id": "100",
+      "file": "100.hea",
+      "bytes": 143,
+      "url": "https://physionet.org/files/mitdb/1.0.0/100.hea",
+      "sha256": "60ebc904c7bf3e04d142638d3fd5c903e8dc9f10f1ea3264e07926aa089ee75e"
+    },
+    {
+      "record_id": "100",
+      "file": "100.dat",
+      "bytes": 1950000,
+      "url": "https://physionet.org/files/mitdb/1.0.0/100.dat",
+      "sha256": "b2ea3c250e56e48f4b7b90697832b8ecd1afa1e0bb31f2dcfea4ed6e1075a639"
+    },
+    {
+      "record_id": "100",
+      "file": "100.atr",
+      "bytes": 4558,
+      "url": "https://physionet.org/files/mitdb/1.0.0/100.atr",
+      "sha256": "8d8a5349fb16638ebbf649f1779d12e96d91b736b2aafe59db43719ae583d471"
+    },
+    {
+      "record_id": "105",
+      "file": "105.hea",
+      "bytes": 258,
+      "url": "https://physionet.org/files/mitdb/1.0.0/105.hea",
+      "sha256": "9a024eebf8e9baf630308815e689d7e3eab471ab0069db6aded127c396418d48"
+    },
+    {
+      "record_id": "105",
+      "file": "105.dat",
+      "bytes": 1950000,
+      "url": "https://physionet.org/files/mitdb/1.0.0/105.dat",
+      "sha256": "fcd0153dfea69c749194bb73de7db124588857cfa2f6aecb72754894c8afde02"
+    },
+    {
+      "record_id": "105",
+      "file": "105.atr",
+      "bytes": 5638,
+      "url": "https://physionet.org/files/mitdb/1.0.0/105.atr",
+      "sha256": "278d534c1ad952a6d41db963b6b2b00be070d8dd5fa66545caa5c18edcc36497"
+    },
+    {
+      "record_id": "200",
+      "file": "200.hea",
+      "bytes": 306,
+      "url": "https://physionet.org/files/mitdb/1.0.0/200.hea",
+      "sha256": "9e0c2ff5b790cf624deab0ccb8a9f211a9e29a748d8197da3c1ee7c5b596b40c"
+    },
+    {
+      "record_id": "200",
+      "file": "200.dat",
+      "bytes": 1950000,
+      "url": "https://physionet.org/files/mitdb/1.0.0/200.dat",
+      "sha256": "a9e203b3807b9fcd3647cde03444437cb8eec7f5128a8eb413edafb394272e0f"
+    },
+    {
+      "record_id": "200",
+      "file": "200.atr",
+      "bytes": 8114,
+      "url": "https://physionet.org/files/mitdb/1.0.0/200.atr",
+      "sha256": "f9624a11696760427d75314a78c31f89ca3c446af855890c8f8b66cddd8b3a3f"
+    }
+  ]
+}

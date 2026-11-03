@@ -1,0 +1,7 @@
+record_id,subject_id,partition,lead,fs_hz,all_annotation_entries,target_annotations,included,excluded_targets
+106,subject_106,train,MLII,360,2098,2027,2026,1
+108,subject_108,train,MLII,360,1824,1756,1755,1
+119,subject_119,train,MLII,360,2094,1987,1986,1
+100,subject_100,evaluation,MLII,360,2274,2240,2238,2
+105,subject_105,evaluation,MLII,360,2691,2567,2566,1
+200,subject_200,evaluation,MLII,360,2792,2569,2567,2

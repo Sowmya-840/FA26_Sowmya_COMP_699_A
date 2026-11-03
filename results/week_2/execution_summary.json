@@ -1,0 +1,123 @@
+{
+  "started_utc": "2026-11-03T15:08:46.126021+00:00",
+  "completed_utc": "2026-11-03T15:08:49.817876+00:00",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "wfdb": "4.3.1",
+    "scikit-learn": "1.8.0"
+  },
+  "protocol": {
+    "dataset": "MIT-BIH Arrhythmia Database",
+    "dataset_version": "1.0.0",
+    "train_records": [
+      "106",
+      "108",
+      "119"
+    ],
+    "evaluation_records": [
+      "100",
+      "105",
+      "200"
+    ],
+    "selection_reason": "Small fixed convenience subset expanding the Week 1 records, with MLII and N/V examples. No record or parameter selection based on model scores. This is not the full standard inter-patient benchmark.",
+    "classes": [
+      "N",
+      "V"
+    ],
+    "class_meaning": {
+      "N": "Normal beat (original annotation symbol only)",
+      "V": "Premature ventricular contraction (original annotation symbol only)"
+    },
+    "excluded": "All symbols other than N and V are excluded as targets; no AAMI superclasses are claimed. The first beat, incomplete windows and nonfinite or constant windows are excluded.",
+    "lead": "MLII",
+    "fs_hz": 360,
+    "samples_before": 90,
+    "samples_after_exclusive": 126,
+    "morphology_samples": 24,
+    "features": "Previous reference beat interval (seconds), raw window standard deviation and peak-to-peak amplitude, plus 24 interpolated values from a per-window z-normalized 216-sample segment.",
+    "preprocessing": "No filtering, imputation, oversampling or record-level fitted normalization. StandardScaler is fit to training features only in both learned-model pipelines.",
+    "gaussian_nb": {
+      "var_smoothing": 1e-09
+    },
+    "random_forest": {
+      "n_estimators": 100,
+      "max_depth": 12,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    "reference": "DummyClassifier(strategy=most_frequent), fitted on training labels",
+    "metrics": "Fixed-label macro-F1, accuracy, balanced accuracy and per-class precision, recall, F1 and support; confusion matrices and per-record macro-F1.",
+    "tuning": "None. One fixed train/evaluation partition, one Random Forest seed, no validation search.",
+    "scope": "Offline oracle-annotation-centered beat classification, not automatic beat detection, live monitoring or clinical validation.",
+    "subject_policy": "The six selected records represent different subjects according to the database documentation. Records 201 and 202 share a subject and are excluded; the subject-group function also groups them together defensively."
+  },
+  "protocol_sha256": "40eb14f7a910d041737b771f7da7e6224350910ca44f0965fbdafeaf9cece62b",
+  "feature_names": [
+    "previous_rr_seconds",
+    "raw_std_mv",
+    "raw_peak_to_peak_mv",
+    "morphology_00",
+    "morphology_01",
+    "morphology_02",
+    "morphology_03",
+    "morphology_04",
+    "morphology_05",
+    "morphology_06",
+    "morphology_07",
+    "morphology_08",
+    "morphology_09",
+    "morphology_10",
+    "morphology_11",
+    "morphology_12",
+    "morphology_13",
+    "morphology_14",
+    "morphology_15",
+    "morphology_16",
+    "morphology_17",
+    "morphology_18",
+    "morphology_19",
+    "morphology_20",
+    "morphology_21",
+    "morphology_22",
+    "morphology_23"
+  ],
+  "training_beats": 5767,
+  "evaluation_beats": 7371,
+  "features": 27,
+  "checks_passed": 30,
+  "same_seed_repeatability": true,
+  "run_seconds_by_model_including_prediction": {
+    "majority": 0.001757126000484277,
+    "gaussian_nb": 0.007890433999818924,
+    "random_forest": 1.1024714889999814
+  },
+  "raw_file_hashes": {
+    "106.hea": "ad5ed3ee5603926a07a09f0d0c9e2a7ff10a705dbafcde3d185317730a8839ab",
+    "106.dat": "c017bc18b95b1f970bca143a044ee5d54168648b541e47aa656f2737a59c1202",
+    "106.atr": "585347e6d1bd3ad89cdb52cb80945878a5e51026d81f871a376bb6e13936f7fa",
+    "108.hea": "1c461d963db1883589a975daa80b4104eee6cabb2f5cfec3e0d63b78e7a6a405",
+    "108.dat": "229a4ef62679dc5c6ea781bfbaec2bd784151fc9f9517f4cdecd533a9431eb20",
+    "108.atr": "ea227008ac3bc4ada87807117909e77ae0643d5a8bc09f32b9096a35f140cbf3",
+    "119.hea": "658f01382d7280a06e2f4c06363569d477394a6898c69ee788bb383f6092df63",
+    "119.dat": "02a286a28e69b441568add915f16a2856b22bab893bf8729ee9654411ed3a5aa",
+    "119.atr": "fd919c8ea20eed4a22fb37984977f30ce48d382eefd2d90934bf947a88e0fd7b",
+    "100.hea": "60ebc904c7bf3e04d142638d3fd5c903e8dc9f10f1ea3264e07926aa089ee75e",
+    "100.dat": "b2ea3c250e56e48f4b7b90697832b8ecd1afa1e0bb31f2dcfea4ed6e1075a639",
+    "100.atr": "8d8a5349fb16638ebbf649f1779d12e96d91b736b2aafe59db43719ae583d471",
+    "105.hea": "9a024eebf8e9baf630308815e689d7e3eab471ab0069db6aded127c396418d48",
+    "105.dat": "fcd0153dfea69c749194bb73de7db124588857cfa2f6aecb72754894c8afde02",
+    "105.atr": "278d534c1ad952a6d41db963b6b2b00be070d8dd5fa66545caa5c18edcc36497",
+    "200.hea": "9e0c2ff5b790cf624deab0ccb8a9f211a9e29a748d8197da3c1ee7c5b596b40c",
+    "200.dat": "a9e203b3807b9fcd3647cde03444437cb8eec7f5128a8eb413edafb394272e0f",
+    "200.atr": "f9624a11696760427d75314a78c31f89ca3c446af855890c8f8b66cddd8b3a3f"
+  },
+  "feature_matrix_sha256": "69ca12b2a5a3573efd6dd765ca27435ccac838d3aaf485191ae1c897121f42ba",
+  "clinical_validation": false,
+  "note": "One fixed development comparison. Ground-truth beat locations are used. No fitted quantities use evaluation rows."
+}

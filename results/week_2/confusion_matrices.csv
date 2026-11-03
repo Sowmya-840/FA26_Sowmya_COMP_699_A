@@ -1,0 +1,13 @@
+model,true_class,predicted_class,count
+majority,N,N,6504
+majority,N,V,0
+majority,V,N,867
+majority,V,V,0
+gaussian_nb,N,N,6388
+gaussian_nb,N,V,116
+gaussian_nb,V,N,465
+gaussian_nb,V,V,402
+random_forest,N,N,5708
+random_forest,N,V,796
+random_forest,V,N,12
+random_forest,V,V,855

@@ -1,0 +1,9 @@
+# Tested with Python 3.12.14; use a dedicated environment.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+matplotlib==3.10.8
+wfdb==4.3.1
+scikit-learn==1.8.0
+reportlab==4.4.9
+# Jupyter and ipykernel are optional notebook interface dependencies.
