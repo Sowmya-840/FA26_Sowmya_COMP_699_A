@@ -91,6 +91,6 @@ My next priorities are to add subjects with meaningful V support, examine record
 
 ## Execution provenance and references
 
-Executed Python 3.12.14; numpy 2.3.5, pandas 2.2.3, scipy 1.17.0, matplotlib 3.10.8, wfdb 4.3.1, scikit-learn 1.8.0. execution_summary.json records the protocol, hashes, feature names, timing and environment. Timing is descriptive and environment-dependent. The saved Week 2 execution is from the recorded preparation environment; exact bitwise reproduction across systems is not guaranteed. I used AI assistance during implementation and reviewed the code and evidence.
+Executed Python 3.12.14; numpy 2.3.5, pandas 2.2.3, scipy 1.17.0, matplotlib 3.10.8, wfdb 4.3.1, scikit-learn 1.8.0. execution_summary.json records the protocol, hashes, feature names, timing and environment. Timing is descriptive and environment-dependent. The saved Week 2 execution is from the recorded preparation environment; exact bitwise reproduction across systems is not guaranteed.
 
 Moody, G., & Mark, R. (2005). MIT-BIH Arrhythmia Database (v1.0.0). PhysioNet. https://doi.org/10.13026/C2F305 . Database description: https://physionet.org/content/mitdb/1.0.0/ . Annotation definitions: https://physionet.org/physiobank/database/html/mitdbdir/intro.htm . WFDB reading API: https://wfdb.readthedocs.io/en/latest/io.html . scikit-learn model documentation: https://scikit-learn.org/stable/modules/naive_bayes.html and https://scikit-learn.org/stable/modules/ensemble.html#forest .

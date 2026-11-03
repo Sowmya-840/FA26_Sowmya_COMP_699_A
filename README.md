@@ -72,4 +72,4 @@ Load complete prediction arrays with `numpy.load('results/week_2/predictions.npz
 ### Boundaries and next work
 Only original N and V symbols are targets, not full AAMI categories. Reference annotations provide beat centers and timing. The window extends after the annotation, and beat detection, streaming and alarms are not implemented. Record 100 was inspected in Week 1; this is a fixed development evaluation rather than a pristine final holdout. No weight/parameter search, independent validation or significance test was performed. The larger study and Week 3 evidence evaluation remain planned.
 
-The saved Week 2 outputs come from the environment recorded in `results/week_2/execution_summary.json`, not a separate local Windows run. I used AI assistance in implementation and explanation and reviewed the resulting code and measured evidence. Existing Week 1 submissions remain unchanged.
+The saved Week 2 outputs come from the environment recorded in `results/week_2/execution_summary.json`, not a separate local Windows run. Existing Week 1 submissions remain unchanged.
