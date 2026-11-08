@@ -73,3 +73,16 @@ Load complete prediction arrays with `numpy.load('results/week_2/predictions.npz
 Only original N and V symbols are targets, not full AAMI categories. Reference annotations provide beat centers and timing. The window extends after the annotation, and beat detection, streaming and alarms are not implemented. Record 100 was inspected in Week 1; this is a fixed development evaluation rather than a pristine final holdout. No weight/parameter search, independent validation or significance test was performed. The larger study and Week 3 evidence evaluation remain planned.
 
 The saved Week 2 outputs come from the environment recorded in `results/week_2/execution_summary.json`, not a separate local Windows run. Existing Week 1 submissions remain unchanged.
+
+
+## Maintenance: independently runnable feature checks
+
+Six offline tests cover the existing feature calculations: a known ramp, constant or malformed windows, nonfinite values, invalid RR intervals, and shared-subject grouping for records 201 and 202. The tests load only the two relevant function definitions from the experiment script using Python's syntax tree, so they exercise the existing implementation without running its acquisition or training steps. NumPy is required; recordings and model fitting are not.
+
+Run from the repository root:
+
+```bash
+python -m unittest discover -s src -p 'test_ecg_features.py' -v
+```
+
+The experiment script, notebook, protocol, saved predictions and research results are unchanged.
