@@ -70,7 +70,7 @@ Random Forest had higher macro-F1 but lower accuracy and more false positives. I
 Load complete prediction arrays with `numpy.load('results/week_2/predictions.npz', allow_pickle=False)`. Arrays are `record_id`, `sample`, `true_label`, `majority`, `gaussian_nb` and `random_forest`, in the same row order. Feature examples illustrate the schema; full features are regenerated from raw recordings by the notebook or script. Model binaries are not needed to reproduce training.
 
 ### Boundaries and next work
-Only original N and V symbols are targets, not full AAMI categories. Reference annotations provide beat centers and timing. The window extends after the annotation, and beat detection, streaming and alarms are not implemented. Record 100 was inspected in Week 1; this is a fixed development evaluation rather than a pristine final holdout. No weight/parameter search, independent validation or significance test was performed. The larger study and Week 3 evidence evaluation remain planned.
+Only original N and V symbols are targets, not full AAMI categories. Reference annotations provide beat centers and timing. The window extends after the annotation, and beat detection, streaming and alarms are not implemented. Record 100 was inspected in Week 1; this is a fixed development evaluation rather than a pristine final holdout. No weight/parameter search, independent validation or significance test was performed. A larger subject-separated evaluation remains planned.
 
 The saved Week 2 outputs come from the environment recorded in `results/week_2/execution_summary.json`, not a separate local Windows run. Existing Week 1 submissions remain unchanged.
 
@@ -85,4 +85,13 @@ Run from the repository root:
 python -m unittest discover -s src -p 'test_ecg_features.py' -v
 ```
 
-The experiment script, notebook, protocol, saved predictions and research results are unchanged.
+The feature tests run independently of the Week 2 experiment and use its existing protocol.
+
+## Week 3 preliminary evidence
+
+The error audit counts V-beat mistakes per record and recomputes pooled metrics after omitting each evaluation record in turn. The original predictions stay fixed.
+
+Run `python src/run_week3_evidence.py` from the repository root to recreate the tables in `results/week_3/`. The script uses NumPy from the Week 2 environment. The notebook includes a runnable Week 3 section with the record sensitivity results and observations.
+
+- [Preliminary evidence report](docs/step_2/week_3/preliminary_evidence.pdf)
+- [Editable report](docs/step_2/week_3/preliminary_evidence.md)
