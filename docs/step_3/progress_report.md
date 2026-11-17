@@ -15,3 +15,11 @@ This update builds on the earlier offline MIT-BIH ECG beat-classification experi
 **Task 6 — Reporting.** The six-task research register and protocol preserve the distinction between previously measured evidence, implemented analysis utilities, and pending experiments.
 
 **Limitations and next steps.** The research remains offline, annotation-centered N/V classification rather than live monitoring or clinical validation. Next, verify candidate records, execute the expanded comparison, inspect subject-level variability and development errors, then revise the final report with actual measured results.
+
+## Subsequent verification update
+
+Task 4's retrospective false-positive audit is now completed and documented in `docs/step_3/task_4_existing_error_audit.md`. Across the three previously evaluated records, Gaussian NB generated 116 N-to-V false positives and 465 V-to-N false negatives; Random Forest generated 796 false positives and 12 false negatives. These are original Week 2/3 results, not new expanded-record measurements. The existing data do not isolate the causes of the errors or validate any preprocessing improvement.
+
+For Task 5, all four local unit tests in `src/test_step3_analysis.py` were executed successfully. This checks metric arithmetic and input validation only. The full expanded-dataset model rerun remains blocked because additional MIT-BIH files were not accessible from the current execution environment. See `docs/step_3/task_5_validation.md`.
+
+**Completion status:** Task 4 retrospective analysis and Task 5 unit-level verification are completed. Tasks 1–3 still require verified additional records and real model execution; Task 4's proposed preprocessing intervention and Task 5's full-data reproducibility audit remain pending. Task 6's documentation is updated to reflect these boundaries.
