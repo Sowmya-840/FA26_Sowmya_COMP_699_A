@@ -23,3 +23,7 @@ Task 4's retrospective false-positive audit is now completed and documented in `
 For Task 5, all four local unit tests in `src/test_step3_analysis.py` were executed successfully. This checks metric arithmetic and input validation only. The full expanded-dataset model rerun remains blocked because additional MIT-BIH files were not accessible from the current execution environment. See `docs/step_3/task_5_validation.md`.
 
 **Completion status:** Task 4 retrospective analysis and Task 5 unit-level verification are completed. Tasks 1–3 still require verified additional records and real model execution; Task 4's proposed preprocessing intervention and Task 5's full-data reproducibility audit remain pending. Task 6's documentation is updated to reflect these boundaries.
+
+## Final status for this weekly progress milestone
+
+The **weekly progress documentation is complete**, but the **research itself is not**. Task 1 is partially completed (provisional design only); Task 2 is incomplete (no expanded classifier execution); Task 3 is partially completed (analysis utility, no expanded evaluation); Task 4 is partially completed (existing-data error audit, no waveform-level intervention); Task 5 is partially completed (four unit tests, no full reproducibility rerun); and Task 6 is completed for the present reporting milestone. These labels intentionally preserve outstanding work rather than implying results that have not been obtained. The authoritative six-task status register is `docs/step_3/tasks_1_to_6.md`.
