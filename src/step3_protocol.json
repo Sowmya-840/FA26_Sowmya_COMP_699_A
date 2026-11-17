@@ -1,0 +1,21 @@
+{
+  "study": "Expanded subject-separated offline MIT-BIH N/V beat classification",
+  "status": "design_predeclared_not_executed",
+  "dataset": "MIT-BIH Arrhythmia Database v1.0.0",
+  "original_training_records": ["106", "108", "119"],
+  "original_inspected_evaluation_records": ["100", "105", "200"],
+  "candidate_additional_training_records": ["101", "109", "112", "118", "124"],
+  "development_records": ["100", "105", "200", "103", "113"],
+  "candidate_held_out_evaluation_records": ["203", "205", "208", "210", "215"],
+  "candidate_warning": "Candidate records are provisional and require MLII, N/V support, subject identity and annotation audit before freezing. No scores have been computed for this expanded design.",
+  "excluded_shared_subject_records": ["201", "202"],
+  "target_symbols": ["N", "V"],
+  "features": "Reuse src/week2_protocol.json exactly: 27 features, 216-sample annotation-centered MLII window at 360 Hz",
+  "models": "Reuse majority, GaussianNB and RandomForest settings from src/week2_protocol.json without tuning on held-out records",
+  "primary_metric": "fixed-label N/V macro-F1",
+  "secondary_metrics": ["per-record macro-F1", "V precision", "V recall", "V support", "V false positives", "V false negatives", "pooled confusion matrix"],
+  "uncertainty": "Report across-record variation; any bootstrap must resample subjects rather than individual beats and state its small-sample limitations",
+  "preprocessing": "Unchanged baseline first; any candidate modification is developed on training/development records only",
+  "holdout_policy": "Original evaluation records are development data because their predictions have been inspected; holdout candidates must not influence feature or parameter choices",
+  "scope": "Offline oracle-annotation-centered classification only; no automatic beat detection or clinical validation"
+}
