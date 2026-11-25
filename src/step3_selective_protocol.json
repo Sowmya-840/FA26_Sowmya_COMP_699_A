@@ -1,0 +1,30 @@
+{
+  "status": "additional_inputs_validated_training_pending",
+  "dataset": "MIT-BIH v1.0.0",
+  "training": [
+    "106",
+    "108",
+    "119"
+  ],
+  "inspected_evaluation": [
+    "100",
+    "105",
+    "200"
+  ],
+  "additional_evaluation": [
+    "203",
+    "208"
+  ],
+  "excluded_shared_subject_records": [
+    "201",
+    "202"
+  ],
+  "baseline_protocol": "src/week2_protocol.json",
+  "target_symbols": [
+    "N",
+    "V"
+  ],
+  "policy": "Reuse original feature extraction and model settings; report additional records separately; combine with original predictions only after baseline consistency verification.",
+  "scope": "Offline annotation-centered classification",
+  "remaining": "Recover original training features or obtain training recordings; execute and validate baseline and extension."
+}
