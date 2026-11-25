@@ -1,0 +1,4 @@
+model,pooled_macro_f1,mean_record_macro_f1,min_record_macro_f1,max_record_macro_f1
+majority,0.468757,0.466711,0.404270,0.499888
+gaussian_nb,0.768504,0.785201,0.601660,1.000000
+random_forest,0.806505,0.737039,0.537161,0.840734
