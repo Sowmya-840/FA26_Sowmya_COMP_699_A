@@ -1,0 +1,11 @@
+test_counts (test_validate_ecg_inputs.InputTests.test_counts) ... ok
+test_missing_terminator (test_validate_ecg_inputs.InputTests.test_missing_terminator) ... ok
+test_outside_signal (test_validate_ecg_inputs.InputTests.test_outside_signal) ... ok
+test_signal_validation (test_validate_ecg_inputs.InputTests.test_signal_validation) ... ok
+test_truncated_aux (test_validate_ecg_inputs.InputTests.test_truncated_aux) ... ok
+test_truncated_skip (test_validate_ecg_inputs.InputTests.test_truncated_skip) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.006s
+
+OK
