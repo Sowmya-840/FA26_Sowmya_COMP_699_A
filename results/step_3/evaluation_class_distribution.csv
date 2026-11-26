@@ -1,0 +1,6 @@
+record_id,n,v,total,v_fraction,count_basis
+100,2237,1,2238,0.000447,baseline retained beats
+105,2525,41,2566,0.015978,baseline retained beats
+200,1742,825,2567,0.321387,baseline retained beats
+203,2529,444,2973,0.149344,raw target annotations
+208,1586,992,2578,0.384794,raw target annotations
