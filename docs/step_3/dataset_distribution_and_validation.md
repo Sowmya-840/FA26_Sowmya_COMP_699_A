@@ -1,0 +1,7 @@
+# Evaluation composition and input validation
+
+The existing evaluation counts are taken from the majority-model rows of results/week_3/v_errors_by_record.csv (retained feature rows). Additional counts are raw N/V annotations from the supplied 203 and 208 recordings. These count bases differ; combined counts must not be interpreted as final feature support or classifier results.
+
+The baseline contains 867 ventricular beats among 7371 retained beats (11.76%); 825 of those ventricular beats are from record 200 (95.16%). The additional records contain 1436 ventricular annotations among 5551 target annotations (25.87%). Record 203 has 14.93% ventricular annotations and 208 has 38.48%. This adds two distinct record-level class distributions and reduces reliance on one record for potential ventricular evaluation, subject to feature exclusions. It does not establish clinical generalizability.
+
+Run `python src/validate_ecg_inputs.py /path/to/recordings 203 208` and `python -m unittest discover -s src -p test_validate_ecg_inputs.py -v`. The dependency-free validator checks the specific two-channel format-212 layout, primary MLII lead, 360 Hz sampling, signal length, initial values, checksums and annotation bounds and counts. Both supplied recordings passed; six new unit tests passed locally. The tests use synthetic fixtures only for parser validation, not classifier evidence. This is not a general WFDB reader or an independent provider authenticity check. Existing classifier tests were not rerun. No new classifier predictions were produced.
